@@ -1,0 +1,95 @@
+            .backgroundPosition{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                margin: auto; 
+                height: 450px;
+                width: 80%;
+                background-size: cover;
+                background-position: center;
+                transition: background-image 1s;
+            }
+            .backgroundPosition:before {
+                content: ' ';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0.3;
+                background-color: rgb(255, 255, 255);
+                background-repeat: no-repeat;
+                background-position: 50% 0;
+                background-size: cover;
+              }
+            h1{
+                margin: 20px auto;
+                text-align: center;
+            }
+            /* style of screens */
+            .screen{
+                position: relative;
+                width: 160px;
+                height: 80px;
+                border-radius: 5px;
+                background-size: cover;
+                background-position: center;
+                border-radius: 4px;
+                border: 1px solid black;
+                margin-left: 20px;
+            }
+            .screen:before {
+                content: ' ';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0.3;
+                background-color: black;
+                background-repeat: no-repeat;
+                background-position: 50% 0;
+                background-size: cover;
+              }
+            .whiteTube{
+                width: 120px;
+                height: 3px;
+                background-color: white;
+                border-radius: 2px;
+                position: relative;
+                top: 70px;
+                left: 20px;
+            }
+            @keyframes tube{
+                0%{width: 0;}
+                100%{width: 120px;}
+            }
+            .redTube{
+                animation-name: tube;
+                animation-duration: 5000ms;
+                height: 3px;
+                background-color: red;
+            }
+
+            @media (max-width: 767px){
+                .backgroundPosition{
+                    width: 100%;
+                }
+                .screen{
+                    width: 120px;
+                    height: 60px;
+                    margin-left: 10px;
+                }
+                .whiteTube{
+                    width: 100px;
+                    top: 50px;
+                    left: 10px;
+                }
+                @keyframes tube{
+                    0%{width: 0;}
+                    100%{width: 100px;}
+                }
+            }
