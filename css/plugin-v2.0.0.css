@@ -73,10 +73,14 @@
                 height: 3px;
                 background-color: red;
             }
-
+            @media (max-width: 992px){
+                .backgroundPosition{
+                    width: 90%;
+                }
+            }
             @media (max-width: 767px){
                 .backgroundPosition{
-                    width: 100%;
+                    width: 95%;
                 }
                 .screen{
                     width: 120px;
